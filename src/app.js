@@ -2,9 +2,10 @@
 import express from 'express';
 import handlebars from 'express-handlebars';
 import __dirname from './utils.js';
-app.use(express.static(__dirname + '/public/'))
+
 const app = express();
 
+app.use(express.static(__dirname + '/public/'))
 // Configuramos el motor de plantillas de express-handlebars
 app.engine('handlebars', handlebars.engine())
 app.set('view engine', 'handlebars')
