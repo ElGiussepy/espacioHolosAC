@@ -10,9 +10,9 @@ app.set('view engine', 'handlebars')
 
 // Configuramos la ruta donde se encuentran las vistas
 
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', './src/views');
 app.get('/', (req, res) => {
-  res.render('main');
+  res.render('layouts/main');
 });
 
 const port = 3000;
